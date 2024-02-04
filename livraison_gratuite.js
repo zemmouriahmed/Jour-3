@@ -1,10 +1,11 @@
 function livreGratuit(commande) {
     let total = 0;
+    
 
-    // Calcule du total de la commande
-    for (const prix in commande) {
-        if (commande.hasOwnProperty(prix)) {
-            total += commande[prix];
+    // Calcul du total de la commande
+    for (const produit in commande) {
+        if (commande.hasOwnProperty(produit)) {
+            total += commande[produit];
         }
     }
 
@@ -12,10 +13,10 @@ function livreGratuit(commande) {
     return total > 50;
 }
 
+// Définir commande
+const commande = {"tomate":5.99, "thon":15.99}
+
 console.log(`statut commande pour livraison gratuite:${livreGratuit(commande)} `)
 
-// test
 
-commande = (
-    { "tomate": 5.99, "thon": 15.99 }
-    )
+
